@@ -1,0 +1,498 @@
+/* ===============================
+   Global Reset & Base Styles
+   =============================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    /* Enables smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+    line-height: 1.6;
+  }
+  
+  /* ===============================
+     CSS Variables for the Color Palette
+     =============================== */
+  :root {
+    --primary-color: #6dbf7c; /* Soft Green */
+    --secondary-color: #a7d3f5; /* Light Blue */
+    --light-gray: #f5f5f5;
+    --dark-color: #333;
+    --white: #fff;
+  }
+  
+  /* ===============================
+     Container for Consistent Layout
+     =============================== */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* ===============================
+     Navigation Bar Styling
+     =============================== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* ===============================
+     Hamburger Menu for Mobile
+     =============================== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--dark-color);
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+  
+  /* ===============================
+     Hero Section Styles
+     =============================== */
+  .hero {
+    position: relative;
+    height: 50vh;
+    background: url('img/jfh/PHOTO-2025-04-08-23-02-57.jpg') center center/cover no-repeat;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* ===============================
+     Button Styling
+     =============================== */
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+  }
+  
+  /* ===============================
+     Section Titles
+     =============================== */
+  section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* ===============================
+     About Journey Section
+     =============================== */
+  .about-journey {
+    background-color: var(--white);
+    padding: 40px 0;
+  }
+  
+  /* ===============================
+     Impact Section Styling
+     =============================== */
+  .impact-section {
+    background-color: var(--light-gray);
+    padding: 40px 0;
+  }
+  
+  .impact-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .impact-cards .card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .impact-cards .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* ===============================
+     Get Involved Section Styling
+     =============================== */
+  .get-involved {
+    background-color: var(--white);
+    padding: 40px 0;
+  }
+  
+  .involved-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .involved-column {
+    flex: 1 1 250px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .involved-column img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  
+  /* ===============================
+     About Page Specific Styles
+     =============================== */
+     .about-page .about-header {
+        background-image: url('img/jfh/PHOTO-2025-04-08-23-02-57.jpg');
+        background-size: cover;         /* Ensures the image fills the container, cropping if necessary */
+        background-position:bottom;    /* Centers the focal point of the image */
+        background-repeat: no-repeat;   /* Prevents tile repetition */
+        color: var(--white);
+        text-align: center;
+        padding: 60px 0;
+      
+        /* Optionally, set a min-height or fixed height to ensure the header is tall enough
+           to display a good portion of the image. Adjust the value as desired. */
+        min-height: 300px;
+        /* or, for a responsive "hero" style, try a viewport-based height:
+           height: 50vh; (50% of the browser's viewport height)
+        */
+      }
+      .about-page .about-header .container{
+        font-size: 50px;
+      }
+  
+  .two-column {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+  
+  /* Timeline Styles for About Page */
+  .timeline {
+    background-color: var(--light-gray);
+    padding: 40px 0;
+  }
+  
+  .timeline-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline-list li {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .timeline-content {
+    background-color: var(--white);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* ===============================
+     Contact Page Specific Styles
+     =============================== */
+  .contact-page .contact-header {
+    background-image: url('img/jfh/PHOTO-2025-04-08-23-02-57_3.jpg'); /* Replace with your image URL */
+  background-size: cover;         /* Ensures the image fills the container (cropping if needed) */
+  background-position: bottom;    /* Centers the image so its focal point is visible */
+  background-repeat: no-repeat;   /* Prevents the image from tiling */
+  
+  /* Setting minimum height so that part of the image is visible */
+  min-height: 300px;              /* Adjust to control how much is visible */
+  padding: 60px 0;                /* Vertical spacing for header content */
+  
+  /* Text styling so that the content is clearly visible on top of the image */
+  color: var(--white);
+  text-align: center;
+  }
+
+  .contact-page .contact-header .container{
+    font-size: 30px;
+  }
+  
+  .contact-form-section {
+    background-color: var(--white);
+    padding: 40px 0;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .contact-info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  /* Map Placeholder for Contact Page */
+  .map-placeholder {
+    margin-top: 20px;
+  }
+  
+  /* ===============================
+     Footer Styling
+     =============================== */
+  footer {
+    background-color: var(--light-gray);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* ===============================
+     Responsive Media Queries
+     =============================== */
+  
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .two-column {
+      flex-direction: column;
+    }
+    
+    .impact-cards,
+    .involved-columns {
+      flex-direction: column;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 480px) {
+    /* Hide navigation links and display hamburger menu */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: var(--white);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+      display: flex;
+    }
+    
+    .hamburger {
+      display: flex;
+    }
+    
+    /* Adjust hero text sizes on smaller devices */
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ===============================
+     Fade-in Animation for Sections
+     =============================== */
+  .fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+  
+  /* ===============================
+   Social Media Icons Styling
+   =============================== */
+.social-media {
+    margin: 10px 0;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* ===============================
+  get involved section extra styling
+   =============================== */
+   .involved-column a {
+    /* Remove default link styling */
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* Ensure the link spans the block content */
+    text-align: center;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .involved-column a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color); /* Or another accent color */
+  }
+  
+  .involved-column a i {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 10px;
+    display: block; /* Move icon above text */
+  }
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Ensure proper scaling on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey for Hope - Contact Us</title>
+  <!-- Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Journey for Hope</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main content for Contact Us page -->
+  <main class="contact-page">
+    <!-- Header Section with Title and Introductory Text -->
+    <section class="contact-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you! Reach out to us with any questions or to get involved in our community initiatives.</p>
+      </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <!-- Contact Information and Map Placeholder -->
+        <div class="contact-info fade-in">
+          <p>Email: <a href="mailto:journeyforhopewalk@gmail.com">journeyforhopewalk@gmail.com</a></p>
+          <!-- Replace the placeholder below with your Google Map embed code if needed -->
+          <div class="map-placeholder">
+            <img src="https://via.placeholder.com/600x400" alt="Google Map Placeholder">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+    <!-- Footer: Simple footer with navigation links, social media links and copyright -->
+    <footer>
+        <div class="container footer-container">
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+          <!-- Social Media Links -->
+          <div class="social-media">
+            <a href="YOUR_TWITTER_LINK" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="YOUR_INSTAGRAM_LINK" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="YOUR_FACEBOOK_LINK" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <!-- Add more social links as needed (example: LinkedIn) -->
+            <a href="YOUR_LINKEDIN_LINK" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+          <p>&copy; 2025 Journey for Hope. All rights reserved.</p>
+        </div>
+      </footer>
+    
+  <!-- Supabase connection -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/supabase.min.js"></script>
+  <!-- Include the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
