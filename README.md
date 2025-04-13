@@ -1,5 +1,4 @@
----
-readme: |
+
   # Journey for Hope
 
   **Journey for Hope** is a fully responsive website designed to empower communities and inspire positive change. The site features three main pages—**Home**, **About Us**, and **Contact Us**—built using HTML5, CSS3 (without frameworks), and vanilla JavaScript. The design is clean, modern, and uses Flexbox and CSS Grid to ensure a uniform experience on desktop, tablet, and mobile devices.
